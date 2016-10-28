@@ -15,6 +15,13 @@ module.exports = {
     chunks: false
   },
   module: {
+    // preLoaders:[
+    //   {
+    //     test: /\.jsx?$/,
+    //     // loader: "eslint-loader",
+    //     exclude: /node_modules/
+    //   }
+    // ],
     loaders : [
       {
         test: /\.jsx?$/,
