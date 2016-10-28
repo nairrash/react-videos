@@ -1,17 +1,21 @@
 /* global React ReactDOM */
-
-const React = require('react')// eslint-disable-line no-unused-vars
+const React = require('react')
 const ReactDOM = require('react-dom')// eslint-disable-line no-unused-vars
+const Landing =  require('./Landing')
+const Search = require('./Search')
+const ReactRouter = require('react-router')
+const {Router , Route, hashHistory } = ReactRouter
 
-var App = () => (
-  <div className='app-container'>
-    <div className='home-info'>
-      <h1 className='title'>svideo</h1>
-      <input className='search' type='text' placeholder='Search'/>
-      <button className='browse-all'> or Browse All </button>
-    </div>
+// const Router = ReactRouter.Router
+// const Route =ReactRouter.Route
+// const hashHistory = ReactRouter.hashHistory
 
-  </div>
+const App = () => (
+  <Router history = {hashHistory}>
+    <Route path='/' component={Landing} />
+    <Route path='/search' component={Search} />
+
+  </Router>
 )
 
 ReactDOM.render(<App/>, document.getElementById('app'))// eslint-disable-line no-unused-vars
